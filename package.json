@@ -1,0 +1,35 @@
+{
+  "name": "anshukushwaha.com",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html --open",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anshuak47/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Anshu Kushwaha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anshuak47/portfolio/issues"
+  },
+  "homepage": "https://github.com/Anshuak47/portfolio#readme",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "parcel": "^2.16.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
