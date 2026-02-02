@@ -1,12 +1,15 @@
 const Navbar = () => {
   return (
-    <div className="navbar bg-white">
-      <ul className="">
-        <li className="uppercase text-3xl font-bold underline">Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Portfolio</li>
-      </ul>
+    <div className="flex flex-row justify-center w-full items-center">
+      <div className="main-nav h-full">
+        <ul className="flex bg-white/30 backdrop-filter backdrop-blur-md bg-opacity-5 border rounded-full border-gray-100  shadow-amber-300">
+          <li className="">Home</li>
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      
     </div>
   );
 };
