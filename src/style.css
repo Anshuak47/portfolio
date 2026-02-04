@@ -1,24 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-background-dark: #0f0f0f;
   --color-foreground-dark: #f1fdfe;
   --color-primary-dark: #0f0f0f;
+  --color-secondary-dark: #323232;
+  --color-accent: #5e7eff;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 480px;
+  --font-manrope: "Manrope", sans-serif;
+  --font-urbanist: "Urbanist", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --text-h1: 5.61rem;
+  --text-h2: 4.209rem;
+  --text-h3: 3.157rem;
+  --text-h4: 2.369rem;
+  --text-h5: 1.777rem;
+  --text-h6: 1.333rem;
+  --text-p: 1rem;
 }
 
 @layer base {
   body {
-    @apply bg-[--color-background-light]
-             text-[--color-foreground-light]
-             font-sans antialiased;
+    @apply bg-background-dark;
+    @apply font-manrope;
+  }
+
+  h1 {
+    @apply text-h1;
+    font-weight: 600;
+    @apply font-urbanist;
+    @apply text-foreground-dark;
+  }
+
+  h2 {
+    @apply text-h2;
+    font-weight: 600;
+    @apply font-urbanist;
+    @apply text-foreground-dark;
+  }
+
+  h3 {
+    @apply text-h3;
+    font-weight: 500;
+    @apply font-urbanist;
+    @apply text-foreground-dark;
+  }
+
+  h4 {
+    @apply text-h4;
+    @apply font-urbanist;
+    font-weight: 500;
+
+    @apply text-foreground-dark;
+  }
+
+  h5 {
+    @apply text-h5;
+    font-weight: 400;
+
+    @apply font-urbanist;
+    @apply text-foreground-dark;
+  }
+
+  h6 {
+    @apply text-h6;
+    font-weight: 400;
+    @apply font-urbanist;
+    @apply text-foreground-dark;
+  }
+
+  p {
+    @apply text-p;
+    font-weight: 400;
+    @apply font-inter;
+    @apply text-foreground-dark;
   }
 
   a {
-    @apply text-[--color-primary-dark] hover:underline;
+    @apply text-accent;
+    @apply font-inter;
+    @apply text-p;
   }
 
-  .dark a {
-    @apply text-[--color-primary-dark];
+  button {
+    @apply bg-secondary-dark;
+    padding: 10px 20px;
+    border-radius: 7px;
+    @apply text-foreground-dark;
   }
 }
 
