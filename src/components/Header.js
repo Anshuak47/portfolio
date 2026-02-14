@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar flex flex-col" id="navbar">
+    <header className="navbar flex flex-col" id="navbar">
       {/* Desktop Menu */}
 
       <div className="nav-menu bg-[#0f0f0f] p-10 gap-2 md:flex flex-row items-center align-middle hidden">
@@ -54,7 +54,7 @@ const Header = () => {
         <ResponsiveNav />
       </div>
       {/* Responsive menu ends */}
-    </div>
+    </header>
   );
 };
 

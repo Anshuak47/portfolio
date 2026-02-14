@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
 import Header from "./components/Header";
-import Banner from "./components/Banner";
+import Hero from "./components/Hero";
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Banner />
+      <Hero />
     </div>
   );
 };

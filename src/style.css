@@ -4,74 +4,66 @@
 @import "tailwindcss";
 
 @theme {
+  /* Brand */
   --color-background-dark: #0f0f0f;
   --color-foreground-dark: #f1fdfe;
   --color-primary-dark: #0f0f0f;
   --color-secondary-dark: #323232;
-  --color-accent: #5e7eff;
+  --color-accent: #0030f0;
+
+  /* Neutrals */
+  --color-link: #5e7eff;
+
+  /* Fonts */
   --breakpoint-lg: 1024px;
-  --breakpoint-md: 768px;
-  --breakpoint-sm: 480px;
   --font-manrope: "Manrope", sans-serif;
   --font-urbanist: "Urbanist", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  /* Text Sizes */
   --text-h1: 5.61rem;
   --text-h2: 4.209rem;
   --text-h3: 3.157rem;
   --text-h4: 2.369rem;
   --text-h5: 1.777rem;
+  --text-golden: 1.618rem;
   --text-h6: 1.333rem;
   --text-p: 1rem;
 }
 
 @layer base {
   body {
-    @apply bg-background-dark;
-    @apply font-manrope;
+    @apply bg-background-dark font-manrope text-base leading-relaxed;
   }
 
   h1 {
-    @apply text-h1;
+    @apply sm:text-h1 text-h3 font-urbanist tracking-tight text-foreground-dark;
     font-weight: 600;
-    @apply font-urbanist;
-    @apply text-foreground-dark;
   }
 
   h2 {
-    @apply text-h2;
+    @apply sm:text-h2 text-h4 font-urbanist text-foreground-dark tracking-tight;
     font-weight: 600;
-    @apply font-urbanist;
-    @apply text-foreground-dark;
   }
 
   h3 {
-    @apply text-h3;
+    @apply sm:text-h3 text-h5  font-urbanist text-foreground-dark;
     font-weight: 500;
-    @apply font-urbanist;
-    @apply text-foreground-dark;
   }
 
   h4 {
-    @apply text-h4;
-    @apply font-urbanist;
+    @apply sm:text-h4 text-h6 font-urbanist text-foreground-dark;
     font-weight: 500;
-
-    @apply text-foreground-dark;
   }
 
   h5 {
-    @apply text-h5;
+    @apply sm:text-h5 text-golden font-urbanist text-foreground-dark;
     font-weight: 400;
-
-    @apply font-urbanist;
-    @apply text-foreground-dark;
   }
 
   h6 {
-    @apply text-h6;
+    @apply text-h6 font-urbanist text-foreground-dark;
     font-weight: 400;
-    @apply font-urbanist;
-    @apply text-foreground-dark;
   }
 
   p {
@@ -82,7 +74,7 @@
   }
 
   a {
-    @apply text-accent;
+    @apply text-link;
     @apply font-inter;
     @apply text-p;
   }
@@ -91,6 +83,14 @@
     @apply bg-secondary-dark;
     padding: 10px 20px;
     border-radius: 7px;
+    @apply text-foreground-dark;
+  }
+
+  button.dark {
+    @apply bg-accent;
+    font-family: "Inter", sans-serif;
+    padding: 10px 20px;
+    border-radius: 25px;
     @apply text-foreground-dark;
   }
 }
@@ -110,4 +110,8 @@
 .nav-menu li {
   padding: 5px 20px 5px 20px;
   color: white;
+}
+
+ul.tech li {
+  @apply text-h4 sm:text-h3;
 }
