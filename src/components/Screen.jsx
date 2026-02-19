@@ -1,9 +1,8 @@
 import { BiChevronDown } from "react-icons/bi";
-
-export default Screen = () => {
+export default function Screen() {
   return (
-    <div className="order-2 p-3 border border-white/15 rounded-xl shadow-2xl w-full">
-      <div className="relative backdrop-blur-sm h-50 border border-white/8 bg-liner-to-br from-gray-900/50 to-gray-800/30 rounded-lg overflow-hidden">
+    <div className="order-2 p-3 border border-white/15 rounded-xl shadow-2xl w-[50%]">
+      <div className="relative backdrop-blur-sm border border-white/8 bg-liner-to-br from-gray-900/50 to-gray-800/30 rounded-lg overflow-hidden">
         {/* IDE Header */}
         <div className="flex justify-between items-center px-3 sm:px-4 bg-white/8 backdrop-blur-sm py-2 sm:py-3">
           <div className="flex items-center space-x-1 sm:space-x-2">
@@ -18,7 +17,13 @@ export default Screen = () => {
             <BiChevronDown />
           </div>
         </div>
+        <div className="w-full">
+          <img
+            src="https://res.cloudinary.com/anshcr7/image/upload/v1771477239/WordPress_6.4_Dashboard_iwjy6x.png"
+            alt="screen-image"
+          />
+        </div>
       </div>
     </div>
   );
-};
+}

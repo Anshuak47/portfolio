@@ -16,17 +16,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative hero flex flex-col min-h-screen items-center overflow-hidden">
+    <section className="relative hero flex flex-col min-h-screen items-center overflow-hidden px-5 sm:px-5">
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, #0f0f0f, transparent 40%)`,
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, #0030f0, transparent 40%)`,
         }}
       />
 
       {/* Glowing Gradient */}
-      <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-link/40 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-link/30 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-20 left-4 -z-40 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-link/40 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-4 -z-40 sm:right-10 w-48 sm:w-72 h-48 sm:h-72 bg-link/30 rounded-full blur-3xl animate-pulse"></div>
       <Banner />
 
       <Screen />

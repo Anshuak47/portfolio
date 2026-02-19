@@ -71,6 +71,9 @@
     font-weight: 400;
     @apply font-inter;
     @apply text-foreground-dark;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
   }
 
   a {
